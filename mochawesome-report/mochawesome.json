@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-05-31T12:22:34.061Z",
+    "end": "2020-05-31T12:22:38.152Z",
+    "duration": 4091,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "744313e1-a05d-4638-a720-ce61a6d6e468",
+      "title": "",
+      "fullFile": "cypress/integration/test/Framework.js",
+      "file": "cypress/integration/test/Framework.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "882d5b49-60e5-494e-9ba0-0b825cba575a",
+          "title": "Regression Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login Page Test Case",
+              "fullTitle": "Regression Test Suite Login Page Test Case",
+              "timedOut": null,
+              "duration": 3024,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var loginPage = new _LoginPage[\"default\"]();\nvar productPage = new _ProductPage[\"default\"]();\nvar cartPage = new _CartPage[\"default\"]();\nvar checkoutPage = new _CheckoutPage[\"default\"]();\ncy.visit(Cypress.env('url'));\nloginPage.getUsernameEditBox().type(this.logindata.userName);\nloginPage.getPasswordEditBox().type(this.logindata.password);\nloginPage.getLoginButton().click();\nproductPage.productAssertion().should('have.text', 'Products');\nproductPage.selectPrice().select('hilo');\ncy.addProduct(this.adddata.prodName1, this.adddata.prodName2);\nproductPage.clickOnCart().click();\ncartPage.cartAssertion().should('have.text', 'Your Cart');\ncy.removeProduct(this.removedata.removeProduct);\ncartPage.clickOnCheckout().click();\ncheckoutPage.checkoutAssertion().should('have.text', 'Checkout: Your Information');\ncheckoutPage.firstnameEditBox().type(this.checkoutdata.firstName);\ncheckoutPage.lastnameEditBox().type(this.checkoutdata.lastName);\ncheckoutPage.zipcodeEditBox().type(this.checkoutdata.zipCode);",
+              "err": {},
+              "uuid": "f78c0e7c-0989-4e64-9864-4d50202ad7a1",
+              "parentUUID": "882d5b49-60e5-494e-9ba0-0b825cba575a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f78c0e7c-0989-4e64-9864-4d50202ad7a1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3024,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {},
+      "version": "5.1.0"
+    }
+  }
+}
