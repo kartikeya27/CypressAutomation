@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/cypress run",
-    "headTest":"npm run test -- --headed",
-    "chromeTest":"npm run test -- --browser chrome",
-    "recordDashboardTest":"npm run test -- --record --key 8780049a-28b7-4817-b77a-e163f4702d05 --reporter mochawesome",
-    "singleTest":"npm run test -- --headed  --spec cypress/integration/test/*"
+    "headTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "recordDashboardTest": "npm run test -- --record --key 8780049a-28b7-4817-b77a-e163f4702d05 --reporter mochawesome",
+    "singleTest": "npm run test -- --headed  --spec cypress/integration/test/*"
   },
   "author": "Kartik Bhatt",
   "license": "ISC",

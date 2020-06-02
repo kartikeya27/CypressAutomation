@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2020-05-31T12:22:34.061Z",
-    "end": "2020-05-31T12:22:38.152Z",
-    "duration": 4091,
+    "start": "2020-06-02T10:57:52.594Z",
+    "end": "2020-06-02T10:58:02.284Z",
+    "duration": 9690,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "744313e1-a05d-4638-a720-ce61a6d6e468",
+      "uuid": "37f7d4f7-9b5c-4a22-bec8-bb79b08ad0c2",
       "title": "",
       "fullFile": "cypress/integration/test/Framework.js",
       "file": "cypress/integration/test/Framework.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "882d5b49-60e5-494e-9ba0-0b825cba575a",
+          "uuid": "e8faa9cf-ee18-40d8-8385-d1972273d210",
           "title": "Regression Test Suite",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Login Page Test Case",
               "fullTitle": "Regression Test Suite Login Page Test Case",
               "timedOut": null,
-              "duration": 3024,
+              "duration": 7741,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "var loginPage = new _LoginPage[\"default\"]();\nvar productPage = new _ProductPage[\"default\"]();\nvar cartPage = new _CartPage[\"default\"]();\nvar checkoutPage = new _CheckoutPage[\"default\"]();\ncy.visit(Cypress.env('url'));\nloginPage.getUsernameEditBox().type(this.logindata.userName);\nloginPage.getPasswordEditBox().type(this.logindata.password);\nloginPage.getLoginButton().click();\nproductPage.productAssertion().should('have.text', 'Products');\nproductPage.selectPrice().select('hilo');\ncy.addProduct(this.adddata.prodName1, this.adddata.prodName2);\nproductPage.clickOnCart().click();\ncartPage.cartAssertion().should('have.text', 'Your Cart');\ncy.removeProduct(this.removedata.removeProduct);\ncartPage.clickOnCheckout().click();\ncheckoutPage.checkoutAssertion().should('have.text', 'Checkout: Your Information');\ncheckoutPage.firstnameEditBox().type(this.checkoutdata.firstName);\ncheckoutPage.lastnameEditBox().type(this.checkoutdata.lastName);\ncheckoutPage.zipcodeEditBox().type(this.checkoutdata.zipCode);",
               "err": {},
-              "uuid": "f78c0e7c-0989-4e64-9864-4d50202ad7a1",
-              "parentUUID": "882d5b49-60e5-494e-9ba0-0b825cba575a",
+              "uuid": "e3b5310c-8031-4700-99f0-0002da233773",
+              "parentUUID": "e8faa9cf-ee18-40d8-8385-d1972273d210",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f78c0e7c-0989-4e64-9864-4d50202ad7a1"
+            "e3b5310c-8031-4700-99f0-0002da233773"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3024,
+          "duration": 7741,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
