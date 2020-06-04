@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2020-06-02T10:57:52.594Z",
-    "end": "2020-06-02T10:58:02.284Z",
-    "duration": 9690,
+    "failures": 1,
+    "start": "2020-06-03T17:04:01.307Z",
+    "end": "2020-06-03T17:04:14.669Z",
+    "duration": 13362,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "37f7d4f7-9b5c-4a22-bec8-bb79b08ad0c2",
+      "uuid": "c338e10c-c1da-4cf3-acd7-2bbdfdab4716",
       "title": "",
       "fullFile": "cypress/integration/test/Framework.js",
       "file": "cypress/integration/test/Framework.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e8faa9cf-ee18-40d8-8385-d1972273d210",
+          "uuid": "c55fb313-3273-4159-b54a-4a5fb70db1d4",
           "title": "Regression Test Suite",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,33 @@
               "title": "Login Page Test Case",
               "fullTitle": "Regression Test Suite Login Page Test Case",
               "timedOut": null,
-              "duration": 7741,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 11427,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
-              "code": "var loginPage = new _LoginPage[\"default\"]();\nvar productPage = new _ProductPage[\"default\"]();\nvar cartPage = new _CartPage[\"default\"]();\nvar checkoutPage = new _CheckoutPage[\"default\"]();\ncy.visit(Cypress.env('url'));\nloginPage.getUsernameEditBox().type(this.logindata.userName);\nloginPage.getPasswordEditBox().type(this.logindata.password);\nloginPage.getLoginButton().click();\nproductPage.productAssertion().should('have.text', 'Products');\nproductPage.selectPrice().select('hilo');\ncy.addProduct(this.adddata.prodName1, this.adddata.prodName2);\nproductPage.clickOnCart().click();\ncartPage.cartAssertion().should('have.text', 'Your Cart');\ncy.removeProduct(this.removedata.removeProduct);\ncartPage.clickOnCheckout().click();\ncheckoutPage.checkoutAssertion().should('have.text', 'Checkout: Your Information');\ncheckoutPage.firstnameEditBox().type(this.checkoutdata.firstName);\ncheckoutPage.lastnameEditBox().type(this.checkoutdata.lastName);\ncheckoutPage.zipcodeEditBox().type(this.checkoutdata.zipCode);",
-              "err": {},
-              "uuid": "e3b5310c-8031-4700-99f0-0002da233773",
-              "parentUUID": "e8faa9cf-ee18-40d8-8385-d1972273d210",
+              "code": "var loginPage = new _LoginPage[\"default\"]();\nvar productPage = new _ProductPage[\"default\"]();\nvar cartPage = new _CartPage[\"default\"]();\nvar checkoutPage = new _CheckoutPage[\"default\"]();\ncy.visit(Cypress.env('url'));\nloginPage.getUsernameEditBox().type(this.logindata.userName);\nloginPage.getPasswordEditBox().type(this.logindata.password);\nloginPage.getLoginButton().click();\nproductPage.productAssertion().should('have.text', 'Products');\nproductPage.selectPrice().select('hilo'); //cy.addProduct(this.adddata.prodName1,this.adddata.prodName2)\ncy.addProduct();\nproductPage.clickOnCart().click();\ncartPage.cartAssertion().should('have.text', 'Your Cart');\ncy.removeProduct(this.removedata.removeProduct);\ncartPage.clickOnCheckout().click();\ncheckoutPage.checkoutAssertion().should('have.text', 'Checkout: Your Information');\ncheckoutPage.firstnameEditBox().type(this.checkoutdata.firstName);\ncheckoutPage.lastnameEditBox().type(this.checkoutdata.lastName);\ncheckoutPage.zipcodeEditBox().type(this.checkoutdata.zipCode);",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `.fa-layers-counter.shopping_cart_badge`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `.fa-layers-counter.shopping_cart_badge`, but never found it.\n    at ProductPage.clickOnCart (https://www.saucedemo.com/__cypress/tests?p=cypress/integration/test/Framework.js:247:17)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress/integration/test/Framework.js:78:17)",
+                "diff": null
+              },
+              "uuid": "46f676b7-5973-4b6e-a979-479de3fd82eb",
+              "parentUUID": "c55fb313-3273-4159-b54a-4a5fb70db1d4",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "e3b5310c-8031-4700-99f0-0002da233773"
+          "passes": [],
+          "failures": [
+            "46f676b7-5973-4b6e-a979-479de3fd82eb"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 7741,
+          "duration": 11427,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
