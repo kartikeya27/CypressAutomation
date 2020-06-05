@@ -2,9 +2,15 @@
   "defaultCommandTimeout": 8000,
   "pageLoadTimeout": 30000,
   "reporter":"mochawesome",
+  "reporterOptions": {
+    "reportDir": "mochawesome-report",
+    "overwrite": false,
+    "html": false,
+    "json": true,
+    "timestamp": "mmddyyyy_HHMMss"
+  },
   "env": {
     "url": "https://www.saucedemo.com/"
   },
-  "video": "false",
   "projectId": "unt31j"
 }
