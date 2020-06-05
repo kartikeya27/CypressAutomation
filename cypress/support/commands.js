@@ -22,17 +22,7 @@ Cypress.Commands.add('addProduct', () => {
     cy.get('button.btn_primary.btn_inventory').eq(5).click()
     cy.get('button.btn_primary.btn_inventory').eq(4).click() 
 })   
-/*Cypress.Commands.add('addProduct', (productName1,productName2) => { 
-    cy.get('div.inventory_item_price').each(($element, index, $list) => {
-        if($element.text().includes(productName1)) {
-            cy.get('button.btn_primary.btn_inventory').eq(index).click()
-            //cy.get('button.btn_primary.btn_inventory').eq(index).click()
-        }
-        if($element.text().includes(productName2)) {
-            cy.get('button.btn_primary.btn_inventory').eq(index-1).click()
-        }
-    }) 
-})*/
+
 Cypress.Commands.add('removeProduct', () => {
     var cartItem = []
     cy.get('div.inventory_item_price').each($element => {
@@ -40,7 +30,6 @@ Cypress.Commands.add('removeProduct', () => {
     })
     cy.wrap(cartItem).should("equal", cartItem.sort())
     cy.get('button.btn_secondary.cart_button').eq(0).click()
-        
 })
 // -- This is a child command --
 // Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })
