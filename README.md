@@ -44,7 +44,7 @@ npm install
    
 4. I have use mochawesome reporting tool which is totally free.
 
-5. To invoke API test runner please go to your root folder of this project. Then 
+5. To invoke UI test runner please go to your root folder of this project. Then 
    type node_modules/.bin/cypress open
 
 ```
